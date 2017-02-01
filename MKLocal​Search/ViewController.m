@@ -47,13 +47,18 @@
 
 #pragma mark - UI Actions
 -(void)flipView{
+    
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
     request.naturalLanguageQuery = @"Restaurante";
     request.region = _mapView.region;
     MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    
+    
     [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
         NSLog(@"Map Items: %@", response.mapItems);
     }];
+    
+    
 }
 
 
