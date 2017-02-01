@@ -10,12 +10,12 @@
 #import <MapKit/MapKit.h>
 
 
-@interface ViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate>
+@interface ViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate,UISearchControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (nonatomic,strong) CLLocationManager *locationManager;
-
+//@property (nonatomic,strong) UISearchController *searchController;
 
 
 @end

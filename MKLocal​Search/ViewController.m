@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ResultsTableViewController.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+    
     // location manager
     _locationManager = [[CLLocationManager alloc]init];
-    
+
     _locationManager.delegate=self;
     _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     [_locationManager requestWhenInUseAuthorization];
@@ -29,8 +32,28 @@
 //    [_locationManager startUpdatingLocation];
     
     
+    // Navigation bar button item
+    UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Flip"
+                                   style:UIBarButtonItemStyleDone
+                                   target:self
+                                   action:@selector(flipView)];
+    self.navigationItem.rightBarButtonItem = flipButton;
     
     
+    
+    
+}
+
+#pragma mark - UI Actions
+-(void)flipView{
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = @"Restaurante";
+    request.region = _mapView.region;
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        NSLog(@"Map Items: %@", response.mapItems);
+    }];
 }
 
 

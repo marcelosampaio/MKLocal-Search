@@ -14,6 +14,7 @@
 		9C0783B01E425FCB00BCC235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0783AF1E425FCB00BCC235 /* Assets.xcassets */; };
 		9C0783B31E425FCB00BCC235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0783B11E425FCB00BCC235 /* LaunchScreen.storyboard */; };
 		9C0783BC1E426A4B00BCC235 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0783BB1E426A4B00BCC235 /* MapKit.framework */; };
+		9C0783BF1E426E6B00BCC235 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0783BE1E426E6A00BCC235 /* ResultsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		9C0783B21E425FCB00BCC235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0783B41E425FCB00BCC235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C0783BB1E426A4B00BCC235 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C0783BD1E426E6A00BCC235 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		9C0783BE1E426E6A00BCC235 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				9C0783A71E425FCA00BCC235 /* AppDelegate.m */,
 				9C0783A91E425FCA00BCC235 /* ViewController.h */,
 				9C0783AA1E425FCA00BCC235 /* ViewController.m */,
+				9C0783BD1E426E6A00BCC235 /* ResultsTableViewController.h */,
+				9C0783BE1E426E6A00BCC235 /* ResultsTableViewController.m */,
 				9C0783AC1E425FCB00BCC235 /* Main.storyboard */,
 				9C0783AF1E425FCB00BCC235 /* Assets.xcassets */,
 				9C0783B11E425FCB00BCC235 /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0783BF1E426E6B00BCC235 /* ResultsTableViewController.m in Sources */,
 				9C0783AB1E425FCA00BCC235 /* ViewController.m in Sources */,
 				9C0783A81E425FCA00BCC235 /* AppDelegate.m in Sources */,
 				9C0783A51E425FCA00BCC235 /* main.m in Sources */,
