@@ -22,7 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
+//    self.extendedLayoutIncludesOpaqueBars = !self.navigationController.navigationBar.translucent;
+    self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     
     // location manager
     _locationManager = [[CLLocationManager alloc]init];
@@ -113,6 +115,7 @@
     
     _searchController = [[UISearchController alloc] initWithSearchResultsController:locationSearchTable];
     _searchController.searchResultsUpdater = locationSearchTable;
+
     
     // Search Bar
     
@@ -125,8 +128,10 @@
     
     [_searchController setHidesNavigationBarDuringPresentation:NO];
     
-    _searchController.dimsBackgroundDuringPresentation=YES;
-    [_searchController definesPresentationContext];
+    _searchController.dimsBackgroundDuringPresentation=NO;
+    _searchController.definesPresentationContext=YES;
+    
+    
     
 }
 

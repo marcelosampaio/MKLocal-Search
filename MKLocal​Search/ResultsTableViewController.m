@@ -32,19 +32,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = @"Title";
+    cell.detailTextLabel.text = @"Subtitle";
+    
+    
+    return cell;
+    
+}
+
 #pragma mark - Search Controller Delegate
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController{
-    
+    NSLog(@"-> updateSearchResultsForSearchController ***");
 }
 
 
