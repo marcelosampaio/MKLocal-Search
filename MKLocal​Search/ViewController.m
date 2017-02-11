@@ -33,6 +33,12 @@
     [_locationManager requestLocation];
 //    [_locationManager startUpdatingLocation];
     
+
+    // Set up ResultsTableViewController
+    [self setUpResultsScene];
+
+    
+    
     
 //    // Navigation bar button item
 //    UIBarButtonItem *flipButton = [[UIBarButtonItem alloc]
@@ -44,11 +50,8 @@
     
 
     
-    // Set up ResultsTableViewController
-    [self setUpResultsScene];
     
-    // Set up search bar
-    [self setUpSearchBar];
+
     
     
 }
@@ -111,11 +114,12 @@
     _searchController = [[UISearchController alloc] initWithSearchResultsController:locationSearchTable];
     _searchController.searchResultsUpdater = locationSearchTable;
     
+    // Search Bar
     
+    UISearchBar *searchBar = _searchController.searchBar;
+    [searchBar sizeToFit];
+    searchBar.placeholder = @"Search for places";
     
-}
-
--(void)setUpSearchBar{
     // embeds search bar in navigation controller
     self.navigationItem.titleView = _searchController.searchBar;
     
@@ -124,12 +128,7 @@
     _searchController.dimsBackgroundDuringPresentation=YES;
     [_searchController definesPresentationContext];
     
-    UISearchBar *searchBar = _searchController.searchBar;
-    [searchBar sizeToFit];
-    searchBar.placeholder = @"Search for places";
 }
-
-
 
 
 
